@@ -6,7 +6,8 @@ import java.util.ArrayList;
 public class LetterAvg {
 	
 	private String fileName = "Mesonet.txt";
-	ArrayList<MesoStation> stationList = new ArrayList<MesoStation>();
+	private ArrayList<MesoStation> stationList = new ArrayList<MesoStation>();
+	private ArrayList<MesoStation> sameAvg = new ArrayList<MesoStation>();
 	
 	public LetterAvg(int ltgAvg) {
 		try {
@@ -16,7 +17,11 @@ public class LetterAvg {
 		}
 	}
 	
-	public void read(String filename) throws IOException
+	public int numberOfStationWithLetterAvg() {
+		
+	}
+	
+	private void read(String filename) throws IOException
     {
     	
     	BufferedReader br = new BufferedReader(new FileReader(filename));
@@ -38,4 +43,9 @@ public class LetterAvg {
     	}
     	br.close();
     }
+	
+	@Override
+	public String toString() {
+		
+	}
 }

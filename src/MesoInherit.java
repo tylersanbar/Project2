@@ -20,6 +20,7 @@ public class MesoInherit {
 	public int[] calAverage() {
 		
 	}
+	
 	public void read(String filename) throws IOException
     {
     	

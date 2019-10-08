@@ -7,6 +7,7 @@ public class PosAvg {
 	
 	private String fileName = "Mesonet.txt";
 	ArrayList<MesoStation> stationList = new ArrayList<MesoStation>();
+	int index;
 	
 	public PosAvg(String stID) {
 		try {
@@ -14,6 +15,10 @@ public class PosAvg {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public int indexOfStation() {
+		
 	}
 	
 	public void read(String filename) throws IOException
