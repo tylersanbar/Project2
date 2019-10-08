@@ -34,7 +34,7 @@ public class MesoInherit {
     	
     	//Adds stid, then loops through remaining lines
     	while (strg != null) {
-    		strg = strg.substring(4, 8);
+    		strg = strg.substring(0, 3);
     		MesoStation station = new MesoStation(strg);
     		stationList.add(station);
     		strg = br.readLine();
