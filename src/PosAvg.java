@@ -7,7 +7,8 @@ public class PosAvg {
 	
 	private String fileName = "Mesonet.txt";
 	ArrayList<MesoStation> stationList = new ArrayList<MesoStation>();
-	int index;
+	int fileIndex;
+	MesoStation station;
 	
 	public PosAvg(String stID) {
 		try {
@@ -16,11 +17,19 @@ public class PosAvg {
 			e.printStackTrace();
 		}
 		
+		this.station = new MesoStation(stID);
 		
+		for(int i = 0; i < stationList.size(); i++) {
+			if(stationList.get(i).getStID() == station.getStID()) {
+				//file index is 1 greater than array index
+				this.fileIndex = i + 1;
+				
+			}
+		}
 	}
 	
 	public int indexOfStation() {
-		
+		return fileIndex;
 	}
 	
 	public void read(String filename) throws IOException
@@ -45,6 +54,14 @@ public class PosAvg {
     	}
     	br.close();
     }
+	
+	public String toString() {
+		String minusOne = stationList.get(fileIndex - 2).getStID();
+		String plusOne = stationList.get(fileIndex).getStID();
+		String minusTwo = stationList.get(fileIndex - 3).getStID();
+		String plusTwo = stationList.get(fileIndex + 1).getStID();
+		return String.format("This index is average of %s and %s, %s and %s, and so on.", minusOne, plusOne, minusTwo, plusTwo);
+	}
 }
 
 	

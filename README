@@ -3,7 +3,7 @@ Readme - Project 2 - Tyler Sanbar
 PosAvg
 String fileName = "Mesonet.txt";
 ArrayList<MesoStation> stationList; populated from read()
-int index;
+int fileIndex;
 
 PosAvg(stID);
 read(); fills stationList from fileName;
