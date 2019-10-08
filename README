@@ -2,7 +2,7 @@ Readme - Project 2 - Tyler Sanbar
 
 PosAvg
 String fileName = "Mesonet.txt";
-MesoStation[] stationList; populated from read()
+ArrayList<MesoStation> stationList; populated from read()
 int index;
 
 PosAvg(stID);
@@ -13,7 +13,7 @@ toString(); returns "This index is average of <station-1> and <station+1>
  
 MesoInherit
 String fileName = "Mesonet.txt";
-MesoStation[] stationList; populated from read()
+ArrayList<MesoStation> stationList; populated from read()
 int[] avgList = new int[3]; array index [0] stores ceiling, [1] stores floor, [2] stores average 
 
 MesoInherit(MesoStation station(stid)); station parameter is given manually
@@ -24,8 +24,8 @@ letterAverage() returns char with ASCII value == calAverage()[2]
  
 LetterAvg
 String fileName = "Mesonet.txt";
-MesoStation[] stationList; populated from read()
-MesoStation[] sameAvg; stores list of stations with the same letter avg as ltrAvg
+ArrayList<MesoStation> stationList; populated from read()
+ArrayList<MesoStation> sameAvg; stores list of stations with the same letter avg as ltrAvg
 
 LetterAvg(int ltrAvg); output uses mesoInherit.letterAverage() as parameter
 read(); fills stationList from fileName;
