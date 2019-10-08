@@ -7,6 +7,7 @@ public class MesoInherit {
 	
 	private String fileName = "Mesonet.txt";
 	ArrayList<MesoStation> stationList = new ArrayList<MesoStation>();
+	int[] avgList = new int[3];
 	
 	public MesoInherit(MesoStation station) {
 		try {
@@ -16,6 +17,9 @@ public class MesoInherit {
 		}
 	}
 	
+	public int[] calAverage() {
+		
+	}
 	public void read(String filename) throws IOException
     {
     	
@@ -24,9 +28,7 @@ public class MesoInherit {
     	br.readLine();
     	br.readLine();
     	br.readLine();
-    	br.readLine();
-    	br.readLine();
-    	br.readLine();
+
     	String strg = br.readLine();
     	
     	//Adds stid, then loops through remaining lines
