@@ -28,8 +28,8 @@ public class MesoInherit extends MesoAbstract{
 		for(int i = 0; i < 4; i++) {
 			charTotal += (double) stidChars[i];
 		}
-		avgList[0] = (int) Math.floor(charTotal/4.0);
-		avgList[1] = (int) Math.ceil(charTotal/4.0);
+		avgList[0] = (int) Math.ceil(charTotal/4.0);
+		avgList[1] = (int) Math.floor(charTotal/4.0);
 		avgList[2] = (int) Math.round(charTotal/4.0);
 		
 		return avgList;
