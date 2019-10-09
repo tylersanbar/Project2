@@ -9,16 +9,25 @@ public class LetterAvg {
 	private ArrayList<MesoStation> stationList = new ArrayList<MesoStation>();
 	private ArrayList<MesoStation> sameAvg = new ArrayList<MesoStation>();
 	
-	public LetterAvg(int ltgAvg) {
+	public LetterAvg(char ltrAvg) {
 		try {
 			read(fileName);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		MesoStation compareStation;
+		MesoInherit compareInherit;
+		for(int i = 0; i < stationList.size(); i++) {
+			compareStation = stationList.get(i);
+			compareInherit = new MesoInherit(compareStation);
+			if(compareInherit.letterAverage() == ltrAvg) {
+				sameAvg.add(compareStation);
+			}
+		}
 	}
 	
 	public int numberOfStationWithLetterAvg() {
-		
+		return sameAvg.size();
 	}
 	
 	private void read(String filename) throws IOException
@@ -44,6 +53,10 @@ public class LetterAvg {
 	
 	@Override
 	public String toString() {
-		
+		String output = new String("They are:/n");
+		for(int i = 0; i < sameAvg.size(); i++) {
+			output.concat(sameAvg.get(i).getStID() + "/n");
+		}
+		return output;
 	}
 }
