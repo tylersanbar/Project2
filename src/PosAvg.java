@@ -40,9 +40,7 @@ public class PosAvg {
     	br.readLine();
     	br.readLine();
     	br.readLine();
-    	br.readLine();
-    	br.readLine();
-    	br.readLine();
+ 
     	String strg = br.readLine();
     	
     	//Adds stid, then loops through remaining lines

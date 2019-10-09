@@ -3,10 +3,11 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class MesoInherit {
+public class MesoInherit extends MesoAbstract{
 	
 	private String fileName = "Mesonet.txt";
 	ArrayList<MesoStation> stationList = new ArrayList<MesoStation>();
+	char[] stidChars = new char[4];
 	int[] avgList = new int[3];
 	
 	public MesoInherit(MesoStation station) {
@@ -15,10 +16,27 @@ public class MesoInherit {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		stidChars[0] = station.getStID().charAt(0);
+		stidChars[1] = station.getStID().charAt(1);
+		stidChars[2] = station.getStID().charAt(2);
+		stidChars[3] = station.getStID().charAt(3);
+		this.calAverage();
 	}
 	
 	public int[] calAverage() {
+		Double charTotal = 0.0;
+		for(int i = 0; i < 4; i++) {
+			charTotal += (double) stidChars[i];
+		}
+		avgList[0] = (int) Math.floor(charTotal/4.0);
+		avgList[1] = (int) Math.ceil(charTotal/4.0);
+		avgList[2] = (int) Math.round(charTotal/4.0);
 		
+		return avgList;
+	}
+	
+	public char letterAverage() {
+		return (char) avgList[2];
 	}
 	
 	public void read(String filename) throws IOException
