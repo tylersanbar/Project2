@@ -16,11 +16,10 @@ public class LetterAvg {
 			e.printStackTrace();
 		}
 		MesoStation compareStation;
-		MesoInherit compareInherit;
 		for(int i = 0; i < stationList.size(); i++) {
 			compareStation = stationList.get(i);
-			compareInherit = new MesoInherit(compareStation);
-			if(compareInherit.letterAverage() == ltrAvg) {
+
+			if(compareStation.getStID().charAt(0) == ltrAvg) {
 				sameAvg.add(compareStation);
 			}
 		}
@@ -53,9 +52,9 @@ public class LetterAvg {
 	
 	@Override
 	public String toString() {
-		String output = new String("They are:/n");
+		String output = new String("\nThey are:");
 		for(int i = 0; i < sameAvg.size(); i++) {
-			output.concat(sameAvg.get(i).getStID() + "/n");
+			output += ("\n" + sameAvg.get(i).getStID());
 		}
 		return output;
 	}
