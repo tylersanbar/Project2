@@ -6,9 +6,8 @@ import java.util.ArrayList;
 public class PosAvg {
 	
 	private String fileName = "Mesonet.txt";
-	ArrayList<MesoStation> stationList = new ArrayList<MesoStation>();
-	int fileIndex;
-	MesoStation station;
+	private ArrayList<MesoStation> stationList = new ArrayList<MesoStation>();
+	private int fileIndex;
 	
 	public PosAvg(String stID) {
 		try {
@@ -17,7 +16,7 @@ public class PosAvg {
 			e.printStackTrace();
 		}
 		
-		this.station = new MesoStation(stID);
+		MesoStation station = new MesoStation(stID);
 		
 		for(int i = 0; i < stationList.size(); i++) {
 			if(stationList.get(i).getStID().equals(station.getStID())) {

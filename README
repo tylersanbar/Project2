@@ -6,16 +6,17 @@ Provided by instructor
 public class MesoStation
 Provided by instructor
 
-PosAvg
-String fileName = "Mesonet.txt";
-ArrayList<MesoStation> stationList; populated from read()
-int fileIndex;
+public class PosAvg
 
-PosAvg(stID);
-read(); fills stationList from fileName;
-indexOfStation(); calculates the file index of the station and stores in int index
-toString(); returns "This index is average of <station-1> and <station+1>
- , <station-2> and <station+2>, and so on." where <station+-n> is the station at the index +-n
+	private String fileName = "Mesonet.txt";
+	private ArrayList<MesoStation> stationList; populated from read()
+	private int fileIndex; stores fileIndex
+
+	public PosAvg(String stID); constructor, finds file index of parameter and stores
+	public indexOfStation(); returns fileIndex
+	private read(); fills stationList from fileName;
+	public toString(); returns "This index is average of <station-1> and <station+1>
+ 	, <station-2> and <station+2>, and so on." where <station+-n> is the station at the index +-n
  
 MesoInherit
 String fileName = "Mesonet.txt";
