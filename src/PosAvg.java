@@ -20,9 +20,11 @@ public class PosAvg {
 		this.station = new MesoStation(stID);
 		
 		for(int i = 0; i < stationList.size(); i++) {
+			System.out.println(stationList.get(i).getStID());
 			if(stationList.get(i).getStID() == station.getStID()) {
 				//file index is 1 greater than array index
 				this.fileIndex = i + 1;
+				System.out.println(fileIndex);
 				
 			}
 		}
@@ -45,7 +47,7 @@ public class PosAvg {
     	
     	//Adds stid, then loops through remaining lines
     	while (strg != null) {
-    		strg = strg.substring(0, 3);
+    		strg = strg.substring(1, 5);
     		MesoStation station = new MesoStation(strg);
     		stationList.add(station);
     		strg = br.readLine();
