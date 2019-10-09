@@ -29,12 +29,12 @@ public class MesoInherit
 	public letterAverage() returns char with ASCII value == calAverage()[2]
 	private read(); fills stationList from fileName;
  
-LetterAvg
-String fileName = "Mesonet.txt";
-ArrayList<MesoStation> stationList; populated from read()
-ArrayList<MesoStation> sameAvg; stores list of stations with the same letter avg as ltrAvg
+public class LetterAvg
+	private String fileName = "Mesonet.txt";
+	private ArrayList<MesoStation> stationList; populated from read()
+	private ArrayList<MesoStation> sameAvg; stores list of stations with the same letter avg as ltrAvg
 
-LetterAvg(int ltrAvg); output uses mesoInherit.letterAverage() as parameter
-read(); fills stationList from fileName;
-numberOfStationWithLetterAvg() returns the size of sameAvg()[]
-toString(); "They are: /n<First>/n<Second>/n<ect...>" <> is list of elements in sameAvg()[]
+	public LetterAvg(int ltrAvg); output uses mesoInherit.letterAverage() as parameter, populates the arrays
+	public numberOfStationWithLetterAvg() returns the size of sameAvg()[]
+	private read(); fills stationList from fileName;
+	public toString(); "They are: /n<First>/n<Second>/n<ect...>" <> is list of elements in sameAvg()[]
