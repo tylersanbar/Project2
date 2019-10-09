@@ -1,5 +1,11 @@
 Readme - Project 2 - Tyler Sanbar
 
+public class Driver
+Provided by instructor
+
+public class MesoStation
+Provided by instructor
+
 PosAvg
 String fileName = "Mesonet.txt";
 ArrayList<MesoStation> stationList; populated from read()
