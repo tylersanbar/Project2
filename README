@@ -38,3 +38,11 @@ public class LetterAvg
 	public numberOfStationWithLetterAvg() returns the size of sameAvg()[]
 	private read(); fills stationList from fileName;
 	public toString(); "They are: /n<First>/n<Second>/n<ect...>" <> is list of elements in sameAvg()[]
+	
+This project was mostly a challenge in deciphering the guidelines and then organizing the classes appropriatly
+to get the correct output. Once I wrote it all up in the earlier versions of the readme, I decided to start implementing
+so I could see it a bit more clearly. Took some trial and error to sort out the kinks but most of the code was pretty simple.
+
+Once everything was done I tested it, found some issues and fixed them, and updated github as I did. I then updated the 
+README as I found it better to focus on the code with this project since organizing and formatting it correctly was the real challenge.
+
