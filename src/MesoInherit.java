@@ -6,9 +6,9 @@ import java.util.ArrayList;
 public class MesoInherit extends MesoAbstract{
 	
 	private String fileName = "Mesonet.txt";
-	ArrayList<MesoStation> stationList = new ArrayList<MesoStation>();
-	char[] stidChars = new char[4];
-	int[] avgList = new int[3];
+	private ArrayList<MesoStation> stationList = new ArrayList<MesoStation>();
+	private char[] stidChars = new char[4];
+	private int[] avgList = new int[3];
 	
 	public MesoInherit(MesoStation station) {
 		try {
@@ -39,7 +39,7 @@ public class MesoInherit extends MesoAbstract{
 		return (char) avgList[2];
 	}
 	
-	public void read(String filename) throws IOException
+	private void read(String filename) throws IOException
     {
     	
     	BufferedReader br = new BufferedReader(new FileReader(filename));

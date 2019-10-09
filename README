@@ -18,16 +18,16 @@ public class PosAvg
 	public toString(); returns "This index is average of <station-1> and <station+1>
  	, <station-2> and <station+2>, and so on." where <station+-n> is the station at the index +-n
  
-MesoInherit
-String fileName = "Mesonet.txt";
-ArrayList<MesoStation> stationList; populated from read()
-int[] avgList = new int[3]; array index [0] stores ceiling, [1] stores floor, [2] stores average 
+public class MesoInherit
+	private String fileName = "Mesonet.txt";
+	private ArrayList<MesoStation> stationList; populated from read()
+	private char[] stidChars = new char[4]; for extracting stid chars
+	private int[] avgList = new int[3]; array index [0] stores ceiling, [1] stores floor, [2] stores average 
 
-MesoInherit(MesoStation station(stid)); station parameter is given manually
-read(); fills stationList from fileName;
-int[] calAverage(); populates avgList[]
-numberOfStationWithLetterAvg();
-letterAverage() returns char with ASCII value == calAverage()[2]
+	public MesoInherit(MesoStation station(stid)); station parameter is given manually
+	public int[] calAverage(); stores and returns avgList[]
+	public letterAverage() returns char with ASCII value == calAverage()[2]
+	private read(); fills stationList from fileName;
  
 LetterAvg
 String fileName = "Mesonet.txt";
