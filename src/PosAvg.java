@@ -22,9 +22,7 @@ public class PosAvg {
 		for(int i = 0; i < stationList.size(); i++) {
 			if(stationList.get(i).getStID().equals(station.getStID())) {
 				//file index is 1 greater than array index
-				this.fileIndex = i + 1;
-				System.out.println(fileIndex);
-				
+				this.fileIndex = i + 1;			
 			}
 		}
 	}
