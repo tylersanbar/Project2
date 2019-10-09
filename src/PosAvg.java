@@ -3,12 +3,19 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * @author tyler
+ *
+ */
 public class PosAvg {
 	
 	private String fileName = "Mesonet.txt";
 	private ArrayList<MesoStation> stationList = new ArrayList<MesoStation>();
 	private int fileIndex;
 	
+	/**
+	 * @param stID
+	 */
 	public PosAvg(String stID) {
 		try {
 			read(fileName);
@@ -26,10 +33,17 @@ public class PosAvg {
 		}
 	}
 	
+	/**
+	 * @return fileIndex
+	 */
 	public int indexOfStation() {
 		return fileIndex;
 	}
 	
+	/**
+	 * @param filename
+	 * @throws IOException
+	 */
 	public void read(String filename) throws IOException
     {
     	
@@ -51,6 +65,9 @@ public class PosAvg {
     	br.close();
     }
 	
+	/**
+	 * Lists a couple of stations which average is the same as index
+	 */
 	public String toString() {
 		String minusOne = stationList.get(fileIndex - 2).getStID();
 		String plusOne = stationList.get(fileIndex).getStID();

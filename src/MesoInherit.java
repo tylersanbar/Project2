@@ -3,6 +3,10 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * @author tyler
+ *
+ */
 public class MesoInherit extends MesoAbstract{
 	
 	private String fileName = "Mesonet.txt";
@@ -10,6 +14,9 @@ public class MesoInherit extends MesoAbstract{
 	private char[] stidChars = new char[4];
 	private int[] avgList = new int[3];
 	
+	/**
+	 * @param station
+	 */
 	public MesoInherit(MesoStation station) {
 		try {
 			read(fileName);
@@ -23,6 +30,9 @@ public class MesoInherit extends MesoAbstract{
 		this.calAverage();
 	}
 	
+	/**
+	 * calculates ceil,floor, and average ASCII value
+	 */
 	public int[] calAverage() {
 		Double charTotal = 0.0;
 		for(int i = 0; i < 4; i++) {
@@ -35,10 +45,17 @@ public class MesoInherit extends MesoAbstract{
 		return avgList;
 	}
 	
+	/**
+	 * Returns calculated ASCII letter average
+	 */
 	public char letterAverage() {
 		return (char) avgList[2];
 	}
 	
+	/**
+	 * @param filename
+	 * @throws IOException
+	 */
 	private void read(String filename) throws IOException
     {
     	

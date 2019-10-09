@@ -3,12 +3,19 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * @author tyler
+ *
+ */
 public class LetterAvg {
 	
 	private String fileName = "Mesonet.txt";
 	private ArrayList<MesoStation> stationList = new ArrayList<MesoStation>();
 	private ArrayList<MesoStation> sameAvg = new ArrayList<MesoStation>();
 	
+	/**
+	 * @param ltrAvg
+	 */
 	public LetterAvg(char ltrAvg) {
 		try {
 			read(fileName);
@@ -25,10 +32,17 @@ public class LetterAvg {
 		}
 	}
 	
+	/**
+	 * @return number of stations with same average
+	 */
 	public int numberOfStationWithLetterAvg() {
 		return sameAvg.size();
 	}
 	
+	/**
+	 * @param filename
+	 * @throws IOException
+	 */
 	private void read(String filename) throws IOException
     {
     	
@@ -50,6 +64,9 @@ public class LetterAvg {
     	br.close();
     }
 	
+	/**
+	 *Lists stations with same average
+	 */
 	@Override
 	public String toString() {
 		String output = new String("\nThey are:");
